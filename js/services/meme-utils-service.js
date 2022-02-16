@@ -5,7 +5,7 @@ function drawImg(num) {
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
     };
-    img.src = `/../img/meme-imgs (square)/${num}.jpg`;
+    img.src = `./../img/meme-imgs (square)/${num}.jpg`;
 }
 
 function drawText(text, x, y) {
