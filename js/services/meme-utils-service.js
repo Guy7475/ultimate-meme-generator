@@ -6,7 +6,7 @@ function drawImg(num) {
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
         drawText('Ultimate Meme Genrator', 50, 50)    
     };
-    img.src = `../../img/meme-imgs (square)/${num}.jpg`;
+    img.src = `../img/meme-imgs (square)/${num}.jpg`;
 }
 
 function drawText(text, x, y) {

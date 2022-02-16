@@ -9,8 +9,7 @@ function onInit() {
     renderMeme()
 }
 
-function renderMeme(){
-    drawImg(2)
-    
+function renderMeme(){ 
+    getMeme()
 }
 
