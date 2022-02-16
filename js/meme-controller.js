@@ -21,6 +21,13 @@ function onTypeText(txt) {
 }
 
 function onPickColor(color) {
-    console.log(color);
+    setLineColor(color)
+    renderMeme()
 }
+
+function onResizeLine(val) {
+    setLineSize(val)
+    renderMeme()
+}
+
 

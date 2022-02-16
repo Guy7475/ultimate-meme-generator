@@ -27,10 +27,14 @@ body {
     height: 150px;
 }
 
-canvas {
-    background-color: #fff;
-    border: 1px solid black;
-    
+.generator-panel {
+    display: none;
 }
 
+canvas {
+    background-color: #fff;
+    border: 1px solid black;   
+}
+
+    
 

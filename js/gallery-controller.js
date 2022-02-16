@@ -16,6 +16,8 @@ function onImgSelect(imgId) {
     let elGallery = document.querySelector('.gallery-container');
     elGallery.style.display = 'none'
     setImg(imgId)
+    let generatorPanel = document.querySelector('.generator-panel')
+    generatorPanel.style.display = 'block'
     renderMeme()
 }
 

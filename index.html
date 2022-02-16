@@ -27,6 +27,10 @@
         <menu>
             <input type="text" name="text-box-1" placeholder="Line 1 here" onchange="onTypeText(this.value)"
                 onfocus="this.placeholder = ''">
+            <input type="color" onchange="onPickColor(this.value)">
+            <button onclick="onResizeLine(-1)">A-</button>
+            <button onclick="onResizeLine(1)">A+</button>
+
         </menu>
 
     </section>
