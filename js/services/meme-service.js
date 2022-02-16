@@ -5,9 +5,9 @@ var gMeme = {
     selectedLineIdx: 0,
     lines: [{
         txt: 'Line 1 here',
-        size: 20,
-        align: 'left',
-        color: 'red'
+        size: 30,
+        align: 'right',
+        color: 'aqua'
     }]
 };
 
@@ -16,7 +16,7 @@ function getMeme() {
     drawImg(gImgs[gMeme.selectedImgId].id);
     let currMeme = gMeme.lines[0];
     setTimeout(() => {
-        drawText(50, 50, currMeme.txt, currMeme.size, currMeme.color);
+        drawText(150, 50, currMeme.txt, currMeme.size, currMeme.align, currMeme.color);
     }, 10);
 }
 
@@ -32,6 +32,11 @@ function setLineSize(val) {
     gMeme.lines[0].size += val
 }
 
+function setTextDirec(val) {
+    gMeme.lines[0].align = val
+    console.log(gMeme.lines[0].align);
+}
+
 function setLineColor(color) {
     gMeme.lines[0].color = color;
 }
@@ -45,15 +50,13 @@ function drawImg(num) {
     img.src = `./img/meme-imgs (square)/${num}.jpg`;
 }
 
-function drawText(x, y, text, size, color) {
-    console.log(text);
-    // gCtx.font = '48px serif';
-    // gCtx.fillText(text, x, y);
+function drawText(x, y, text, size, align, color) {
+    // console.log(text);
     gCtx.lineWidth = 1;
     // gCtx.strokeStyle = 'blue';
-    console.log('color:', color)
     gCtx.fillStyle = color;
     gCtx.font = `${size}px Arial`;
+    gCtx.textAlign = align
     gCtx.fillText(text, x, y);
     gCtx.strokeText(text, x, y);
 }

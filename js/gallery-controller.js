@@ -5,7 +5,7 @@ function renderGallery() {
     const images = getImagesForDisplay();
     let strHTML = images.map(image => {
         return `
-        <img class="glry-img" data-id="${image.id}" src="${image.url}" alt="" onclick="onImgSelect(${image.id})">
+        <img class="glry-img" src="${image.url}" alt="" onclick="onImgSelect(${image.id})">
         `;
     });
     let elGallery = document.querySelector('.gallery-grid');

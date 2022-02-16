@@ -27,9 +27,13 @@
         <menu>
             <input type="text" name="text-box-1" placeholder="Line 1 here" onchange="onTypeText(this.value)"
                 onfocus="this.placeholder = ''">
-            <input type="color" onchange="onPickColor(this.value)">
+            <input type="color" name="color-picker" onchange="onPickColor(this.value)">
             <button onclick="onResizeLine(-1)">A-</button>
             <button onclick="onResizeLine(1)">A+</button>
+            <button onclick="onTextAlign('right')">L</button>
+            <button onclick="onTextAlign('center')">C</button>
+            <button onclick="onTextAlign('left')">R</button>
+            <button onclick="onSwitchLine()">SWL</button>
 
         </menu>
 

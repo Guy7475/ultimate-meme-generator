@@ -12,29 +12,29 @@ body {
 }
 
 .gallery-container {
-    height: 50vh;
-    width: 50vw;
+    
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 5px;
-    height: 50vh;
+    /* height: 50vh; */
 }
 
 .glry-img {
     height: 150px;
 }
 
+canvas {
+    margin-left: 10px;
+}
+
 .generator-panel {
     display: none;
 }
 
-canvas {
-    background-color: #fff;
-    border: 1px solid black;   
-}
+
 
     
 
