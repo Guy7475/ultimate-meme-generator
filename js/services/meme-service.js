@@ -1,7 +1,7 @@
 'use strict';
 
 var gMeme = {
-    selectedImgId: 5,
+    selectedImgId: 2,
     selectedLineIdx: 0,
     lines: [{
         txt: 'I sometimes eat Falafel',
@@ -13,5 +13,10 @@ var gMeme = {
 
 
 function getMeme() {
-    drawImg(gImgs[2].id)
+  
 }
+
+function setLineTxt(text) {
+    gMeme.lines[0].txt = text
+}
+

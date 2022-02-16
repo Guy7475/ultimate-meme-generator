@@ -4,7 +4,6 @@ function drawImg(num) {
     var img = new Image();
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
-        drawText('Ultimate Meme Genrator', 50, 50)    
     };
     img.src = `/../img/meme-imgs (square)/${num}.jpg`;
 }

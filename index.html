@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,23 +10,34 @@
 
     <title>Ultimate Meme Genrator</title>
 </head>
+
 <body onload="onInit()">
     <h1>Ultimate Meme Genrator</h1>
     <section>
-        <div class="gallery">
-            <!-- <img class="meme-bg" src="img/meme-imgs (square)/1.jpg" alt="" style="display:none"> -->
+        <div class="gallery-container">
+            <div class="gallery-grid">
+            </div>
         </div>
-        
+
     </section>
-    <div class="canvas-container">
-        <canvas id="my-canvas" height="450" width="450"></canvas>
-    </div>
+    <section>
+        <div class="canvas-container">
+            <canvas id="my-canvas" height="300" width="300"></canvas>
+        </div>
+        <menu>
+            <input type="text" name="text-box-1" placeholder="Line 1 here" onchange="onTypeText(this.value)"
+                onfocus="this.placeholder = ''">
+        </menu>
+
+    </section>
 
     <script src="js/services/meme-utils-service.js"></script>
     <script src="js/services/meme-storage-service.js"></script>
     <script src="js/services/meme-gallery-service.js"></script>
     <script src="js/services/meme-service.js"></script>
+    <script src="js/gallery-controller.js"></script>
     <script src="js/meme-controller.js"></script>
-    
+
 </body>
+
 </html>
