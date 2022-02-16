@@ -20,3 +20,7 @@ function onTypeText(txt) {
     renderMeme()
 }
 
+function onPickColor(color) {
+    console.log(color);
+}
+
