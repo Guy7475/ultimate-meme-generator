@@ -13,7 +13,10 @@ var gMeme = {
 
 
 function getMeme() {
-
+    drawImg(gImgs[gMeme.selectedImgId].id)
+    setTimeout(() => {
+        drawText(gMeme.lines[0].txt, 50, 50)
+    }, 10);
 }
 
 function setLineTxt(text) {

@@ -12,10 +12,7 @@ function onInit() {
 }
 
 function renderMeme() {
-    drawImg(gImgs[gMeme.selectedImgId].id)
-    setTimeout(() => {
-        drawText(gMeme.lines[0].txt, 50, 50)
-    }, 10);
+    getMeme()
 }
 
 function onTypeText(txt) {
