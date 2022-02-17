@@ -43,6 +43,7 @@ function createLine() {
         font: 'Impact',
     };
     gMeme.lines.push(newLine);
+    setCurrLine()
 }
 
 

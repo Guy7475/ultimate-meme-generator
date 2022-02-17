@@ -17,7 +17,7 @@ function onImgSelect(imgId) {
     elGallery.style.display = 'none'
     setImg(imgId)
     let generatorPanel = document.querySelector('.generator-panel')
-    generatorPanel.style.display = 'block'
+    generatorPanel.style.display = 'flex'
     renderMeme()
 }
 
