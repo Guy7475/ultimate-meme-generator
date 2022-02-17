@@ -26,14 +26,14 @@
         </div>
         <menu>
             <div class="line-input">
-                <input type="text" name="text-box-1" placeholder="Line 1 here" onchange="onTypeText(this.value)"
+                <input type="text" name="text-box" placeholder="Type text here" onchange="onTypeText(this.value)"
                     onfocus="this.placeholder = ''">
             </div>
             <div class="line-constructor">
                 <button class="line-up">^</button>
                 <button class="line-down">v</button>
                 <button onclick="onSwitchLine()">SWL</button>
-                <button class="add-new-line">+</button>
+                <button class="add-new-line" onclick="onAddLine()">+</button>
                 <button class="delet-line">del</button>
             </div>
             <div class="line-size-align">

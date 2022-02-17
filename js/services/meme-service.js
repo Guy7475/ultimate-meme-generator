@@ -44,7 +44,7 @@ var gMeme = {
 //     console.log(randY);
 // }
 
-toggleLineIdx() {
+function toggleLineIdx() {
     
 }
 
