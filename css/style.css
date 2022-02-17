@@ -1,40 +1,13 @@
-* {
-    box-sizing: border-box;
-}
+/* setup */
+@import 'setup/vars.css';
+@import 'setup/typography.css';
 
-h1 {
-    color: rgb(0, 15, 219);
-}
+/* base */
+@import 'basic/base.css';
+@import 'basic/layout.css';
+@import 'basic/mq.css';
 
-body {
-    background-color: rgb(255, 221, 177);
-    margin: 0;
-}
-
-.gallery-container {
-    
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 5px;
-    /* height: 50vh; */
-}
-
-.glry-img {
-    height: 150px;
-}
-
-canvas {
-    margin-left: 10px;
-}
-
-.generator-panel {
-    display: none;
-}
-
-
-
-    
+/* components */
+@import 'components/gallery.css';
+@import 'components/generator-panel.css';
 

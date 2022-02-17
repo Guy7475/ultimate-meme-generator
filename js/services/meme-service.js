@@ -7,7 +7,7 @@ var gMeme = {
         txt: 'Line 1 here',
         size: 30,
         align: 'right',
-        color: 'aqua'
+        color: 'white'
     }]
 };
 
@@ -53,9 +53,9 @@ function drawImg(num) {
 function drawText(x, y, text, size, align, color) {
     // console.log(text);
     gCtx.lineWidth = 1;
-    // gCtx.strokeStyle = 'blue';
+    gCtx.strokeStyle = 'black';
     gCtx.fillStyle = color;
-    gCtx.font = `${size}px Arial`;
+    gCtx.font = `${size}px Impact`;
     gCtx.textAlign = align
     gCtx.fillText(text, x, y);
     gCtx.strokeText(text, x, y);

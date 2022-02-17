@@ -1,0 +1,11 @@
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 5px;
+    /* height: 50vh; */
+}
+
+.glry-img {
+    height: 150px;
+    cursor: pointer;
+}
