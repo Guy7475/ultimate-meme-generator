@@ -46,7 +46,6 @@ function createLine() {
     setCurrLine()
 }
 
-
 function getMeme() {
     drawImg(gImgs[gMeme.selectedImgId].id);
 }

@@ -59,6 +59,9 @@ function listenToStrokeColor() {
     }, false);
 }
 
+
+
+// TODO - compress down to one funtion with swith case on service
 function onSwitchLine() {
     setCurrLine()
     console.log(currLine);
@@ -102,3 +105,9 @@ function canvasSize() {
     }
     setCanvsSize(canvSize)
 }
+
+function resizeCanvas() {
+    gCanvas.height = document.querySelector('.canvas-container').offsetHeight;
+    gCanvas.width = document.body.offsetWidth;
+    //TODO restore canvas after resizing
+  }
