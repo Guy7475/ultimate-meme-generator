@@ -1,42 +1,98 @@
 'use strict';
+var gCanvWidth;
+var gCanvheight;
+
+var currLine
 
 var gMeme = {
     selectedImgId: 2,
     selectedLineIdx: 0,
-    lines: [{
-        txt: 'Line 1 here',
-        size: 30,
-        align: 'right',
-        fontColor: 'white',
-        StrokeColor: 'black',
-        font: 'Impact',
-    }]
+    lines: [
+        {
+            xCor: 150,
+            yCor: 50,
+            txt: 'New line',
+            size: 30,
+            align: 'center',
+            fontColor: 'white',
+            StrokeColor: 'black',
+            font: 'Impact',
+        },
+        {
+            xCor: 150,
+            yCor: 275,
+            txt: 'New line',
+            size: 30,
+            align: 'center',
+            fontColor: 'white',
+            StrokeColor: 'black',
+            font: 'Impact',
+        },
+    ]
 };
 
+// function createLine() {
+//     const newLine = {
+//         txt: 'New line',
+//         size: 30,
+//         align: 'right',
+//         fontColor: 'white',
+//         StrokeColor: 'black',
+//         font: 'Impact',
+//     }
+//     gMeme.lines.push(newLine)
+//     console.log(randY);
+// }
+
+toggleLineIdx() {
+    
+}
 
 function getMeme() {
     drawImg(gImgs[gMeme.selectedImgId].id);
-    let currMeme = gMeme.lines[0];
-    setTimeout(() => {
+}
+
+function drawImg(num) {
+    var img = new Image();
+    img.onload = () => {
+        gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
+        exFuncDrawText();
+    };
+    img.src = `./img/meme-imgs (square)/${num}.jpg`;
+}
+
+function exFuncDrawText() {
+    
+    gMeme.lines.map(line => {
         drawText(
-            150, 50,
-            currMeme.txt,
-            currMeme.size,
-            currMeme.align,
-            currMeme.fontColor,
-            currMeme.StrokeColor,
-            currMeme.font,
+            line.xCor,
+            line.yCor,
+            line.txt,
+            line.size,
+            line.align,
+            line.fontColor,
+            line.StrokeColor,
+            line.font,
         );
-    }, 10);
+    });
+    // let currMeme = gMeme.lines[0];
+    //     drawText(
+    //         currMeme.xCor, 
+    //         currMeme.yCor,
+    //         currMeme.txt,
+    //         currMeme.size,
+    //         currMeme.align,
+    //         currMeme.fontColor,
+    //         currMeme.StrokeColor,
+    //         currMeme.font,
+    //     );
 }
 
 function drawText(x, y, text, size, align, fontColor, strokeColor, font) {
-    // console.log(text);
     gCtx.lineWidth = 1;
     gCtx.strokeStyle = strokeColor;
     gCtx.fillStyle = fontColor;
     gCtx.font = `${size}px ${font}`;
-    // console.log(font);
     gCtx.textAlign = align;
     gCtx.fillText(text, x, y);
     gCtx.strokeText(text, x, y);
@@ -71,12 +127,10 @@ function setFont(font) {
     gMeme.lines[0].font = font;
 }
 
-
-function drawImg(num) {
-    var img = new Image();
-    img.onload = () => {
-        gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
-    };
-    img.src = `./img/meme-imgs (square)/${num}.jpg`;
+function setCanvsSize(canvSize) {
+    gCanvWidth = canvSize.width;
+    gCanvheight = canvSize.height;
 }
+
+
 
