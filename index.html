@@ -25,21 +25,33 @@
             <canvas id="my-canvas" height="300" width="300"></canvas>
         </div>
         <menu>
-            <input type="text" name="text-box-1" placeholder="Line 1 here" onchange="onTypeText(this.value)"
-                onfocus="this.placeholder = ''">
-            <input type="color" name="font-color">
-            <input type="color" name="stroke-color">
-            <button onclick="onResizeLine(-1)">A-</button>
-            <button onclick="onResizeLine(1)">A+</button>
-            <button onclick="onTextAlign('right')">L</button>
-            <button onclick="onTextAlign('center')">C</button>
-            <button onclick="onTextAlign('left')">R</button>
-            <button onclick="onSwitchLine()">SWL</button>
-            <select name="fonts" id="" onchange="onFontSelection(this.value)">
-                <option value="Impact">Impact</option>
-                <option value="balsamiq">Balsamiq</option>
-                <option value="press-start">press-start</option>
-            </select>
+            <div class="line-input">
+                <input type="text" name="text-box-1" placeholder="Line 1 here" onchange="onTypeText(this.value)"
+                    onfocus="this.placeholder = ''">
+            </div>
+            <div class="line-constructor">
+                <button class="line-up">^</button>
+                <button class="line-down">v</button>
+                <button onclick="onSwitchLine()">SWL</button>
+                <button class="add-new-line">+</button>
+                <button class="delet-line">del</button>
+            </div>
+            <div class="line-size-align">
+                <button onclick="onResizeLine(-1)">A-</button>
+                <button onclick="onResizeLine(1)">A+</button>
+                <button onclick="onTextAlign('right')">L</button>
+                <button onclick="onTextAlign('center')">C</button>
+                <button onclick="onTextAlign('left')">R</button>
+            </div>
+            <div class="font-and-color">
+                <select name="fonts" id="" onchange="onFontSelection(this.value)">
+                    <option value="Impact">Impact</option>
+                    <option value="balsamiq">Balsamiq</option>
+                    <option value="press-start">press-start</option>
+                </select>
+                <input type="color" name="font-color">
+                <input type="color" name="stroke-color">
+            </div>
 
         </menu>
 
