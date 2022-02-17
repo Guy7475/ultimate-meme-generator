@@ -1,20 +1,22 @@
+.generator-panel {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(156, 156, 156);
+    padding: 1em;
+    border-radius: 15px;
+}
+
 .canvas-container {
-    background-color: aqua;
     margin: 0;
 }
 
 canvas {
     margin: 0;
-}
-
-.generator-panel {
-    display: none;
-    flex-direction: column;
-    align-items: center;
+    border-radius: 5%;
 }
 
 .button-menu {
-    background-color: rgb(207, 12, 12);
     margin: 0;
     padding: 1em;
     text-align: center;
@@ -22,4 +24,13 @@ canvas {
 
 .menu-line {
     padding: .5em ;
+}
+
+button img{
+    width: 1em;
+    height: 1em;
+}
+
+.font-color {
+    background-image: url(../../icons/paint-board-and-brush.png);
 }

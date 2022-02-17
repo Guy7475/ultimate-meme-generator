@@ -6,9 +6,11 @@
 @import 'basic/base.css';
 @import 'basic/layout.css';
 @import 'basic/helper.css';
-@import 'basic/mq.css';
 
 /* components */
+@import 'components/header.css';
 @import 'components/gallery.css';
 @import 'components/generator-panel.css';
 
+/* media query */
+@import 'basic/mq.css';

@@ -3,22 +3,13 @@
 }
 
 h1 {
-    color: rgb(0, 15, 219);
+    font-family: press-start;
+    color: rgb(255, 255, 255);
+    font-size: 1.25em;
 }
 
 body {
-    background-color: rgb(255, 221, 177);
-    margin: 0;
-    text-align: ;
-}
-
-
-
-
-
-
-
-
-
+    background-color: rgb(48, 48, 48); /* For browsers that do not support gradients */
     
-
+    margin: 0;
+}
