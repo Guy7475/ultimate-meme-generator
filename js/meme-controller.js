@@ -74,6 +74,11 @@ function onAddLine() {
     renderMeme();
 }
 
+function onDeleteLine() {
+    deleteCurrLine()
+    renderMeme()
+}
+
 function onResizeLine(val) {
     setLineSize(val);
     renderMeme();

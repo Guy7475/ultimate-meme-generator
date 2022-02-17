@@ -46,7 +46,6 @@ function createLine() {
 }
 
 
-
 function getMeme() {
     drawImg(gImgs[gMeme.selectedImgId].id);
 }
@@ -100,6 +99,11 @@ function setCurrLine() {
 
 function setImg(imgId) {
     gMeme.selectedImgId = imgId - 1;
+}
+
+function deleteCurrLine() {
+    gMeme.lines.splice(gMeme.selectedLineIdx, 1)
+    setCurrLine()
 }
 
 function setLineTxt(text) {
