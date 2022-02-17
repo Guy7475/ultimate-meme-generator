@@ -29,7 +29,7 @@ var gMeme = {
     ]
 };
 
-var currLine
+var currLine = gMeme.lines[gMeme.selectedLineIdx]
 
 // function createLine() {
 //     const newLine = {
@@ -100,7 +100,7 @@ function setLineTxt(text) {
 
 function setLineSize(val) {
     currLine.size += val;
-    // console.log(currline);
+    console.log(currLine);
 }
 
 function setTextDirec(val) {
