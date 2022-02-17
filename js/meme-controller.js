@@ -61,6 +61,7 @@ function listenToStrokeColor() {
 
 function onSwitchLine() {
     toggleLineIdx()
+    console.log(currLine);
 }
 
 function onAddLine() {

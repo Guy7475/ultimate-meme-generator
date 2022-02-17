@@ -2,8 +2,6 @@
 var gCanvWidth;
 var gCanvheight;
 
-var currLine
-
 var gMeme = {
     selectedImgId: 2,
     selectedLineIdx: 0,
@@ -11,7 +9,7 @@ var gMeme = {
         {
             xCor: 150,
             yCor: 50,
-            txt: 'New line',
+            txt: 'line 1',
             size: 30,
             align: 'center',
             fontColor: 'white',
@@ -21,7 +19,7 @@ var gMeme = {
         {
             xCor: 150,
             yCor: 275,
-            txt: 'New line',
+            txt: 'line 2',
             size: 30,
             align: 'center',
             fontColor: 'white',
@@ -30,6 +28,8 @@ var gMeme = {
         },
     ]
 };
+
+var currLine
 
 // function createLine() {
 //     const newLine = {
@@ -45,7 +45,11 @@ var gMeme = {
 // }
 
 function toggleLineIdx() {
-    
+    gMeme.selectedLineIdx += 1;
+    if (gMeme.selectedLineIdx > gMeme.lines.length - 1) {
+        gMeme.selectedLineIdx = 0;
+    }
+    currLine = gMeme.lines[gMeme.selectedLineIdx]
 }
 
 function getMeme() {
@@ -62,7 +66,6 @@ function drawImg(num) {
 }
 
 function exFuncDrawText() {
-    
     gMeme.lines.map(line => {
         drawText(
             line.xCor,
@@ -75,17 +78,6 @@ function exFuncDrawText() {
             line.font,
         );
     });
-    // let currMeme = gMeme.lines[0];
-    //     drawText(
-    //         currMeme.xCor, 
-    //         currMeme.yCor,
-    //         currMeme.txt,
-    //         currMeme.size,
-    //         currMeme.align,
-    //         currMeme.fontColor,
-    //         currMeme.StrokeColor,
-    //         currMeme.font,
-    //     );
 }
 
 function drawText(x, y, text, size, align, fontColor, strokeColor, font) {
@@ -103,28 +95,28 @@ function setImg(imgId) {
 }
 
 function setLineTxt(text) {
-    gMeme.lines[0].txt = text;
+    currLine.txt = text;
 }
 
 function setLineSize(val) {
-    gMeme.lines[0].size += val;
+    currLine.size += val;
+    // console.log(currline);
 }
 
 function setTextDirec(val) {
-    gMeme.lines[0].align = val;
-    console.log(gMeme.lines[0].align);
+    currLine.align = val;
 }
 
 function setFontColor(color) {
-    gMeme.lines[0].fontColor = color;
+    currLine.fontColor = color;
 }
 
 function setStrokeColor(color) {
-    gMeme.lines[0].StrokeColor = color;
+    currLine.StrokeColor = color;
 }
 
 function setFont(font) {
-    gMeme.lines[0].font = font;
+    currLine.font = font;
 }
 
 function setCanvsSize(canvSize) {
