@@ -8,8 +8,13 @@ function onInit() {
     gCtx = gCanvas.getContext('2d');
     // addEventListeners()
     renderGallery();
-    listenToColor()
+    addListeners()
     renderMeme();
+}
+
+function addListeners() {
+    listenToFontColor()
+    listenToStrokeColor()
 }
 
 function renderMeme() {
@@ -21,20 +26,25 @@ function onTypeText(txt) {
     renderMeme();
 }
 
-function listenToColor() {
-    let elColorPicker = document.querySelector("input[name=color-picker]");
+function listenToFontColor() {
+    let elColorPicker = document.querySelector("input[name=font-color]");
     elColorPicker.addEventListener("input", function () {
         let color = elColorPicker.value;
         
-        setLineColor(color)
+        setFontColor(color)
         renderMeme();
         
     }, false);
 }
 
-function onPickColor(color) {
-    setLineColor(color)
-    renderMeme();
+function listenToStrokeColor() {
+    let elColorPicker = document.querySelector("input[name=stroke-color]");
+    elColorPicker.addEventListener("input", function () {
+        let color = elColorPicker.value;        
+        setStrokeColor(color)
+        renderMeme();
+        
+    }, false);
 }
 
 function onResizeLine(val) {
@@ -47,3 +57,7 @@ function onTextAlign(val) {
     renderMeme();
 }
 
+function onFontSelection(font) {
+    setFont(font)
+    renderMeme()
+}
