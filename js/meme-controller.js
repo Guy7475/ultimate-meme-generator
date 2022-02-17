@@ -60,13 +60,18 @@ function listenToStrokeColor() {
 }
 
 function onSwitchLine() {
-    toggleLineIdx()
+    setCurrLine()
     console.log(currLine);
 }
 
+function onChangingYcor(val) {
+    setLineYcor(val)
+    renderMeme()
+}
+
 function onAddLine() {
-    // createLine();
-    // renderMeme();
+    createLine();
+    renderMeme();
 }
 
 function onResizeLine(val) {

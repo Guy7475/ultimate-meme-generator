@@ -30,8 +30,8 @@
                     onfocus="this.placeholder = ''">
             </div>
             <div class="line-constructor">
-                <button class="line-up">^</button>
-                <button class="line-down">v</button>
+                <button class="line-up" onclick="onChangingYcor(-1)">^</button>
+                <button class="line-down" onclick="onChangingYcor(1)" >v</button>
                 <button onclick="onSwitchLine()">SWL</button>
                 <button class="add-new-line" onclick="onAddLine()">+</button>
                 <button class="delet-line">del</button>

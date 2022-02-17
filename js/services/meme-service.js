@@ -29,28 +29,23 @@ var gMeme = {
     ]
 };
 
-var currLine = gMeme.lines[gMeme.selectedLineIdx]
+var currLine = gMeme.lines[gMeme.selectedLineIdx];
 
-// function createLine() {
-//     const newLine = {
-//         txt: 'New line',
-//         size: 30,
-//         align: 'right',
-//         fontColor: 'white',
-//         StrokeColor: 'black',
-//         font: 'Impact',
-//     }
-//     gMeme.lines.push(newLine)
-//     console.log(randY);
-// }
-
-function toggleLineIdx() {
-    gMeme.selectedLineIdx += 1;
-    if (gMeme.selectedLineIdx > gMeme.lines.length - 1) {
-        gMeme.selectedLineIdx = 0;
-    }
-    currLine = gMeme.lines[gMeme.selectedLineIdx]
+function createLine() {
+    const newLine = {
+        xCor: 150,
+        yCor: 200,
+        txt: 'middle line',
+        size: 30,
+        align: 'center',
+        fontColor: 'white',
+        StrokeColor: 'black',
+        font: 'Impact',
+    };
+    gMeme.lines.push(newLine);
 }
+
+
 
 function getMeme() {
     drawImg(gImgs[gMeme.selectedImgId].id);
@@ -88,6 +83,19 @@ function drawText(x, y, text, size, align, fontColor, strokeColor, font) {
     gCtx.textAlign = align;
     gCtx.fillText(text, x, y);
     gCtx.strokeText(text, x, y);
+}
+
+function setLineYcor(val) {
+    currLine.yCor += val * 3;
+}
+
+function setCurrLine() {
+    gMeme.selectedLineIdx += 1;
+    // gMeme.lines.sort((a,b) => a.yCor - b.yCor)
+    if (gMeme.selectedLineIdx > gMeme.lines.length - 1) {
+        gMeme.selectedLineIdx = 0;
+    }
+    currLine = gMeme.lines[gMeme.selectedLineIdx];
 }
 
 function setImg(imgId) {
